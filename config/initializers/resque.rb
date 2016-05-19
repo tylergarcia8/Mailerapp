@@ -1,7 +1,7 @@
 Resque.redis = 'localhost:6379'
 
 Resque.after_fork = Proc.new {
-	ActiveRecords::Base.establish_connection
+	ActiveRecord::Base.establish_connection
 }
 
 Resque.logger = Logger.new STDOUT
